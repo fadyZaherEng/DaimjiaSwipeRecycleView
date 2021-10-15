@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:layoutDirection="ltr"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp">
+
+        <com.daimajia.swipe.SwipeLayout
+            android:id="@+id/swipe_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/right_wrapper"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:text="@string/edit"
+                    android:textColor="@color/purple_500" />
+
+                <TextView
+                    android:id="@+id/share"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/share"
+                    android:textColor="@color/purple_500" />
+
+                <ImageButton
+                    android:id="@+id/delete_btn"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@color/purple_500"
+                    android:src="@android:drawable/ic_delete" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/left_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_centerInParent="true"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/btn_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@android:color/white"
+                    android:src="@android:drawable/ic_menu_info_details" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp">
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        style="@style/RippleStylePrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/Face_Book_Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/facebook"
+                            android:background="@color/purple_500"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/card1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="3dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp">
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        style="@style/RippleStylePrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/Twiter_Button"
+                            android:layout_width="match_parent"
+                            android:paddingStart="33dp"
+                            android:paddingEnd="33dp"
+                            android:layout_height="match_parent"
+                            android:text="@string/twitter"
+                            android:textAlignment="center"
+                            android:background="@color/purple_500"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </com.daimajia.swipe.SwipeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
